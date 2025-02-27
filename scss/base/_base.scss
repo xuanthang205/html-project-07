@@ -1,0 +1,59 @@
+@use "../abstracts";
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+input, button {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+body {
+    height: 5000px;
+    font-size: 1.6rem;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+%btn {
+    background-color: #201830;
+    border-radius: 8px;
+    min-width: 157px;
+    height: 64px;
+    color: #fff;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 64px;
+    transition: opacity 0.2s linear;
+}
+
+.btn {
+    @extend %btn;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.container {
+    --grid-gutter-x: 0px;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+        transform-origin: left top;
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        transform-origin: left top;
+    }
+}

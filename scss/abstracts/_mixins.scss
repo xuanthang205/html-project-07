@@ -1,0 +1,13 @@
+@mixin flex-align($g: 0px) {
+    display: flex;
+    align-items: center;
+    column-gap: $g;
+}
+
+@mixin position($position, $t: null, $l: null , $r: null, $b: null) {
+    position:$position;
+    top: $t;
+    left: $l;
+    right: $r;
+    bottom: $b;
+}
