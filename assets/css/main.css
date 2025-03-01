@@ -1176,6 +1176,9 @@ body {
   border-radius: 9px;
   background: #fff;
 }
+.audio-player::after {
+  content: url(../../assets/images/wave.svg);
+}
 
 .playPauseBtn {
   display: flex;
@@ -1184,6 +1187,7 @@ body {
   width: 26px;
   height: 26px;
   border-radius: 50%;
+  flex-shrink: 0;
   background: #fff;
   border: 1px solid #936cdd;
   color: #936CDD;

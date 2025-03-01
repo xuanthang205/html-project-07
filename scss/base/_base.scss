@@ -83,10 +83,16 @@ body {
     border-radius: 9px;
 
     background: #fff;
+
+    &::after {
+        content: url(../../assets/images/wave.svg);
+    }
 }
+
 
 .playPauseBtn {
     @include abstracts.flex-center($w: 26px, $circle: true);
+    flex-shrink: 0;
 
     background: #fff;
     border: 1px solid #936cdd;
