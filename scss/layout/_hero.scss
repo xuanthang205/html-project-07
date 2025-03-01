@@ -1,0 +1,204 @@
+@use "../abstracts";
+.hero {
+    background-color: abstracts.$bg-color;
+    padding: 98px 0 140px;
+
+    .row {
+        align-items: center;
+    }
+
+    &__media {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__heading {
+        position: relative;
+        z-index: 1;
+
+        color: abstracts.$text-color;
+
+        @include abstracts.text-styles(7rem, 1.14, 700);
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 33px;bottom: 72px;
+            z-index: -1;
+            background-image: url("../../assets/images/hero-decor-2.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 332px;
+            height: 38px;   
+        }
+    }
+
+    &__desc {
+        margin-top: 20px;
+
+        color: abstracts.$text-second-color;
+        @include abstracts.text-styles(1.8rem, 1.67);
+    }
+
+    &__cta {
+        display: flex;
+
+        margin-top: 40px;
+
+        &-btn {
+            background-color: #936cdd;
+        }
+
+        &-link {
+            @include abstracts.flex-align($cg: 8px);
+
+            margin-left: 28px;
+
+            cursor: pointer;
+        }
+
+        &-title {
+            color: #201830;
+            @include abstracts.text-styles(1.8rem, 1.67, 600);
+        }
+    }
+}
+.hero-col {
+    &:nth-child(2) {
+        position: relative;
+
+        display: flex;
+        flex-direction: column-reverse;
+
+        & .hero-col__wrap {
+            margin-top: 28px;
+        }
+    }
+
+    width: calc((100% - 30px) / 2);
+
+    &__wrap {
+        width: 100%;
+        height: 302px;
+
+        border-radius: 8px;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+
+        border-radius: inherit;
+
+        object-fit: cover;
+        object-position: center top;
+        vertical-align: bottom;
+    }
+
+    &__sing {
+        width: 194px;
+        padding: 14px 0;
+        margin: -76px auto 0;
+
+        text-align: center;
+
+        border-radius: 9px;
+        background: rgba(255, 255, 255, 0.4);
+        box-shadow: 0px 12px 44px 0px rgba(0, 0, 0, 0.07);
+        backdrop-filter: blur(5px);
+
+        &-singer {
+            color: abstracts.$text-color;
+            @include abstracts.text-styles(1.4rem, 1, 600);
+        }
+
+        &-name {
+            margin-top: 6px;
+
+            color: abstracts.$text-second-color;
+            @include abstracts.text-styles(1.2rem, 1);
+        }
+    }
+
+    &__listener {
+        margin-top: 53px;
+
+        &-title {
+            color: abstracts.$text-color;
+            @include abstracts.text-styles(1.4rem, 1.71, 600);
+        }
+
+        &-wrap {
+            display: flex;
+
+            margin-top: 10px;
+        }
+
+        &-avatar ~ &-avatar {
+            margin-left: -18px;
+        }
+
+        &-avatar {
+            @include abstracts.flex-center($w: 48px, $circle: true);
+            object-fit: cover;
+
+            border: 2px solid #fff;
+
+            background-color: #000;
+
+            color: #fff;
+            @include abstracts.text-styles(1.2rem, 1.83, 600);
+        }
+    }
+
+    &__promote {
+        @include abstracts.position(absolute, 8px, 70px);
+
+        @include abstracts.flex-center(
+            $drt: column,
+            $rg: 4px,
+            $w: 82px,
+            $circle: true
+        );
+
+        background-color: #ff9051;
+
+        &::before, &::after {
+            content: "";
+            @include abstracts.position(absolute) {
+                top: 48.8%;
+                right: 117%;
+            };
+
+            background-image: url(../../assets/images/hero-decor-1.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 63.4%;
+            height: 39%;
+        }
+
+        &::after {
+            right: -0.08%;
+            top: auto;
+            bottom: -15%;
+            transform: translateY(100%);
+        }
+
+        &-title {
+            color: #fff;
+            @include abstracts.text-styles(1.4rem, 1, 800);
+        }
+
+        &-desc {
+            color: #ffefe7;
+            @include abstracts.text-styles(1rem, 1, 500);
+        }
+    }
+
+    &__app {
+        display: flex;
+        column-gap: 18px;
+
+        margin-top: 102px;
+    }
+}

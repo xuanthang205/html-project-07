@@ -1,0 +1,118 @@
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .hero__heading {
+    font-size: 6.7rem;
+  }
+  .hero__heading::before {
+    bottom: 62px;
+  }
+  .hero-col__promote::after {
+    right: -40%;
+  }
+}
+/* PC */
+@media (min-width: 992px) {
+  .hide-on-pc {
+    display: none;
+  }
+}
+/* Mobile and Tablet*/
+@media (max-width: 991.98px) {
+  .only-pc {
+    display: none;
+  }
+  .mobile__modal {
+    inset: 0;
+    position: fixed;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+  }
+  .mobile__modal.show-modal {
+    opacity: 1;
+    visibility: visible;
+  }
+  .mobile__drawer {
+    inset: 0 40% 0 0;
+    position: fixed;
+    z-index: 2;
+    padding: 50px 20px 0 50px;
+    background-color: #fff;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+  }
+  .mobile__drawer.show-drawer {
+    transform: translateX(0);
+  }
+  .mobile__drawer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .mobile__drawer-icon {
+    font-size: 2.8rem;
+  }
+  .mobile__cta {
+    margin-top: 20px;
+  }
+  .mobile__cta-link {
+    --btn-height: 48px;
+    min-width: 90px;
+    border-radius: 6px;
+    font-size: 1.6rem;
+    color: #201830;
+  }
+  .mobile__cta-link.btn {
+    margin-right: 12px;
+    color: #fff;
+  }
+  .nav-mobile {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 20px 0 10px;
+    border-bottom: 1px solid #9f9d9d;
+  }
+  .nav-mobile__item {
+    padding: 10px 10px 10px 0;
+    color: #201830;
+  }
+  .hero__heading {
+    margin-top: 40px;
+  }
+  .hero__heading::before {
+    bottom: -14px;
+  }
+}
+/* Tablet */
+/* Mobile */
+@media (max-width: 767.98px) {
+  .container {
+    --grid-gutter-x: 30px;
+  }
+}
+@media (max-width: 440px) {
+  .mobile__cta-link.btn {
+    margin-bottom: 12px;
+  }
+  .mobile__drawer-top img {
+    width: 100px;
+  }
+  .mobile__drawer-icon {
+    font-size: 2rem;
+  }
+  .mobile__cta-link {
+    font-size: 1.4rem;
+  }
+  .nav-mobile__item {
+    font-size: 1.4rem;
+  }
+}
+
+/*# sourceMappingURL=responsive.css.map */

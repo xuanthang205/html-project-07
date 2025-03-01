@@ -88,8 +88,18 @@
             href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
             rel="stylesheet"
         />
+        <!-- Font-awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
         <!-- Style -->
         <link rel="stylesheet" href="./assets/css/main.css" />
+        <!-- Responsive -->
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
     </head>
     <body>
         <header class="header sticky">
@@ -102,7 +112,7 @@
                             class="header__logo"
                         />
                     </a>
-                    <nav class="nav">
+                    <nav class="nav only-pc">
                         <a href="#!" class="nav__item">Episodes</a>
                         <a href="#!" class="nav__item">Trending</a>
                         <div class="sub-nav">
@@ -143,22 +153,217 @@
                         </div>
                         <a href="#!" class="nav__item">Blog</a>
                     </nav>
-                    <div class="header__actions">
+                    <div class="header__actions only-pc">
                         <a href="#!" class="header__link">Log in</a>
                         <a href="#!" class="btn header__btn">Sign up</a>
                     </div>
+                    <img
+                        src="./assets/icons/Menu.svg"
+                        alt=""
+                        class="header__menu hide-on-pc"
+                    />
+                </div>
+            </div>
+        </header>
+
+        <!-- Mobile Header -->
+        <header class="mobile-header hide-on-pc">
+            <div class="mobile__modal"></div>
+            <div class="mobile__drawer">
+                <div class="mobile__drawer-top">
+                    <img src="./assets/icons/babble-logo.svg" alt="logo" />
+                    <span class="mobile__drawer-icon"
+                        ><i class="fa-solid fa-xmark"></i
+                    ></span>
+                </div>
+                <nav class="nav-mobile">
+                    <a href="#!" class="nav-mobile__item">Episodes</a>
+                    <a href="#!" class="nav-mobile__item">Trending</a>
+                    <a href="#!" class="nav-mobile__item">Category</a>
+                    <a href="#!" class="nav-mobile__item">Blog</a>
+                </nav>
+                <div class="mobile__cta">
+                    <a href="#!" class="btn mobile__cta-link">Log in</a>
+                    <a href="#!" class="mobile__cta-link">Sign up</a>
                 </div>
             </div>
         </header>
 
         <!-- Hero -->
-        <!-- <section class="hero">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-lg-6 "></div>
-                <div class="col"></div>
+        <section class="hero">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <div class="hero__media">
+                            <div class="hero-col">
+                                <div class="hero-col__wrap">
+                                    <img
+                                        src="./assets/images/son-tung-m-tp.webp"
+                                        alt="hero-background"
+                                        class="hero-col__img"
+                                    />
+                                    <div class="audio-player">
+                                        <button
+                                            id="playPauseBtn"
+                                            class="playPauseBtn"
+                                        >
+                                            <i class="fas fa-play"></i>
+                                        </button>
+
+                                        <img
+                                            src="./assets/images/wave.svg"
+                                            alt=""
+                                        />
+
+                                        <audio
+                                            id="audio"
+                                            src="./assets/audio/HayTraoChoAnh-SonTungMTP.mp3"
+                                        ></audio>
+                                    </div>
+                                </div>
+
+                                <div class="hero-col__listener">
+                                    <p class="hero-col__listener-title">
+                                        Podcast listener
+                                    </p>
+                                    <div class="hero-col__listener-wrap">
+                                        <img
+                                            src="./assets/images/pngtree-beauty-woman-face.jpg"
+                                            alt=""
+                                            class="hero-col__listener-avatar"
+                                        />
+                                        <img
+                                            src="./assets/images/pngtree-beauty-woman-face.jpg"
+                                            alt=""
+                                            class="hero-col__listener-avatar"
+                                        />
+                                        <img
+                                            src="./assets/images/pngtree-beauty-woman-face.jpg"
+                                            alt=""
+                                            class="hero-col__listener-avatar"
+                                        />
+                                        <div class="hero-col__listener-avatar">
+                                            +50K
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="hero-col">
+                                <div class="hero-col__wrap">
+                                    <img
+                                        src="./assets/images/Son_Tung_M-TP_1_(2017).png"
+                                        alt="hero-background"
+                                        class="hero-col__img"
+                                    />
+
+                                    <div class="hero-col__sing">
+                                        <p class="hero-col__sing-singer">
+                                            Son Tung MTP
+                                        </p>
+                                        <p class="hero-col__sing-name">
+                                            Hay trao cho anh
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="hero-col__app">
+                                    <img
+                                        src="./assets/icons/image-21.svg"
+                                        alt=""
+                                        class="hero-col__app-icon"
+                                    />
+                                    <img
+                                        src="./assets/icons/image-22.svg"
+                                        alt=""
+                                        class="hero-col__app-icon"
+                                    />
+                                    <img
+                                        src="./assets/icons/image-23.svg"
+                                        alt=""
+                                        class="hero-col__app-icon"
+                                    />
+                                </div>
+                                <div class="hero-col__promote">
+                                    <span class="hero-col__promote-title"
+                                        >500+</span
+                                    >
+                                    <p class="hero-col__promote-desc">
+                                        Podcasts
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-5 offset-lg-1">
+                        <div class="hero__content">
+                            <h1 class="hero__heading">
+                                A new era of podcasting for you
+                            </h1>
+                            <p class="hero__desc">
+                                Rebuilt for simplicity and speed, so you can
+                                spend more time discovering and listening to
+                                great podcasts.
+                            </p>
+                            <div class="hero__cta">
+                                <a href="#!" class="btn hero__cta-btn">
+                                    Get started
+                                </a>
+
+                                <button class="hero__cta-link">
+                                    <span class="hero__cta-title">Listen now</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <circle cx="9" cy="9" r="9" fill="#201830"/>
+                                        <path d="M12.85 8.9134C12.9167 8.95189 12.9167 9.04811 12.85 9.0866L7.15 12.3775C7.08333 12.416 7 12.3679 7 12.2909L7 5.7091C7 5.63212 7.08333 5.58401 7.15 5.6225L12.85 8.9134Z" fill="white"/>
+                                      </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-     </section> -->
+        </section>
+        <script>
+            const mobileMenu = document.querySelector(".header__menu");
+            const mobileModal = document.querySelector(".mobile__modal");
+            const mobileDrawer = document.querySelector(".mobile__drawer");
+            const mobileDrawerIcon = document.querySelector(
+                ".mobile__drawer-icon"
+            );
+
+            mobileMenu.addEventListener("click", () => {
+                mobileModal.classList.add("show-modal");
+                mobileDrawer.classList.add("show-drawer");
+            });
+
+            mobileModal.addEventListener("click", () => {
+                mobileModal.classList.remove("show-modal");
+                mobileDrawer.classList.remove("show-drawer");
+            });
+
+            mobileDrawerIcon.addEventListener("click", () => {
+                mobileDrawer.classList.remove("show-drawer");
+                mobileModal.classList.remove("show-modal");
+            });
+
+            const audio = document.getElementById("audio");
+            const playPauseBtn = document.getElementById("playPauseBtn");
+            let isPlaying = false;
+
+            playPauseBtn.addEventListener("click", () => {
+                if (isPlaying) {
+                    audio.pause();
+                    playPauseBtn.innerHTML = `<i class="fas fa-play"></i>`;
+                } else {
+                    audio.play();
+                    playPauseBtn.innerHTML = `<i class="fas fa-pause"></i>`;
+                }
+                isPlaying = !isPlaying;
+                audio.addEventListener("ended", () => {
+                    playPauseBtn.innerHTML = `<i class="fas fa-play"></i>`;
+                    isPlaying = false;
+                });
+            });
+        </script>
     </body>
 </html>

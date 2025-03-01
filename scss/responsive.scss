@@ -1,0 +1,165 @@
+@use "./abstracts";
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px){
+    .hero {
+        &__heading {
+            font-size: 6.7rem;
+
+            &::before {
+                bottom: 62px;
+            }
+        }
+    } 
+    .hero-col {
+        &__promote::after {
+            right: -40%;
+        }
+    }
+}
+
+
+/* PC */
+@media (min-width: 992px) {
+    .hide-on-pc {
+        display: none;
+    }
+}
+/* Mobile and Tablet*/
+@media (max-width: 991.98px) {
+    .only-pc {
+        display: none;
+    }
+
+    .mobile {
+        &__modal {
+            @include abstracts.position(fixed, $z: 2) {
+                inset: 0
+            };
+
+            background-color: rgb(0, 0, 0, 0.6);
+            opacity: 0;
+
+            visibility: hidden;
+
+            transition: all 0.5s ease;
+
+            &.show-modal {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        &__drawer {
+            @include abstracts.position(fixed, $z: 2) {
+                inset: 0 40% 0 0;
+            };
+
+            padding: 50px 20px 0 50px;
+
+            background-color: #fff;
+
+            transform: translateX(-100%);
+            transition: all 0.5s ease;
+
+            &.show-drawer {
+                transform: translateX(0);
+            }
+
+            &-top {
+                @include abstracts.flex-align($jtf: true);
+            }
+
+            &-icon {
+                font-size: 2.8rem;
+            }
+        }
+
+        &__cta {
+            margin-top: 20px;
+
+            &-link {
+                --btn-height: 48px;
+                min-width: 90px;
+
+                border-radius: 6px;
+
+                font-size: 1.6rem;
+                color: abstracts.$text-color;
+            }
+
+            &-link.btn {
+                margin-right: 12px;
+
+                color: #fff;
+            }
+        }
+    }
+
+    .nav-mobile {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+
+        padding: 20px 0 10px;
+        border-bottom: 1px solid #9f9d9d;
+
+        &__item {
+            padding: 10px 10px 10px 0;
+            color: abstracts.$text-color;
+        }
+    }
+
+    .hero {
+        &__heading {
+            margin-top: 40px;
+
+            &::before {
+                bottom: -14px;
+            }
+        }
+    } 
+}
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+    .container {
+        --grid-gutter-x: 30px;
+    }
+}
+
+@media (max-width: 440px) {
+    .mobile {
+        &__cta-link.btn {
+            margin-bottom: 12px;
+        }
+
+        &__drawer {
+            &-top img {
+                width: 100px;
+            }
+
+            &-icon {
+                font-size: 2rem;
+            }
+        }
+
+        &__cta-link {
+            font-size: 1.4rem;
+        }
+    }
+
+    .nav-mobile {
+        &__item {
+            font-size: 1.4rem;
+        }
+    }
+}

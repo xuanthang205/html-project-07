@@ -6,26 +6,25 @@
     background-color: abstracts.$bg-color;
 
     &.sticky {
-        position: sticky;
-        top: -30px;
+        @include abstracts.position(sticky, $t: -30px, $z: 2);
     }
 
     &__inner {
-        @include abstracts.flex-align;
-        justify-content: space-between;
+        @include abstracts.flex-align($jtf: true);
     }
 
     &__actions {
-        @include abstracts.flex-align(28px);
+        @include abstracts.flex-align($cg: 28px);
     }
 
     &__btn {
+        --btn-height: 48px;
+
         @extend %btn;
+
         min-width: 116px;
-        height: 48px;
 
         font-size: 1.6rem;
-        line-height: 48px;
 
         border-radius: 6px;
     }
@@ -41,7 +40,9 @@
 
     &__item {
         padding: 10px 24px;
+
         color: abstracts.$text-second-color;
+
         transition: all 0.2s linear;
 
         &:hover {
@@ -58,7 +59,8 @@
     }
 
     &__title {
-        @include abstracts.flex-align(7px);
+        @include abstracts.flex-align($cg: 7px);
+
         padding: 10px 24px;
 
         color: abstracts.$text-second-color;
@@ -89,10 +91,13 @@
 
     &__item {
         display: block;
+
         min-width: 120px;
         padding: 12px;
+
         color: abstracts.$text-second-color;
         font-size: 1.4rem;
+
         transition: all 0.2s linear;
 
         &:hover {
@@ -104,3 +109,7 @@
         border-top: 1px solid abstracts.$text-second-color;
     }
 }
+
+
+
+
