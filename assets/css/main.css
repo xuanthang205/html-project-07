@@ -1285,24 +1285,29 @@ li:not(:first-child) .sub-nav__item {
   justify-content: space-between;
 }
 .hero__heading {
-  position: relative;
-  z-index: 1;
   color: #201830;
   font-size: 7rem;
   font-weight: 700;
   line-height: 1.14;
 }
-.hero__heading::before {
-  content: "";
+.hero__heading-decor {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  height: 1.14em;
+}
+.hero__heading-decor::after {
   position: absolute;
-  left: 33px;
-  bottom: 72px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -15px;
   z-index: -1;
+  content: "";
   background-image: url("../../assets/images/hero-decor-2.svg");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  width: 332px;
-  height: 38px;
+  width: 85.4%;
+  height: 48%;
 }
 .hero__desc {
   margin-top: 20px;

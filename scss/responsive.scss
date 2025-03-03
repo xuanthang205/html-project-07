@@ -10,10 +10,6 @@
     .hero {
         &__heading {
             font-size: 6.7rem;
-
-            &::before {
-                bottom: 62px;
-            }
         }
     }
     .hero-col {
@@ -119,26 +115,22 @@
 
         &__heading {
             margin-top: 40px;
-
-            &::before {
-                bottom: -14px;
-            }
+            font-size: 6.8rem;
         }
     }
 }
 /* Tablet */
 @media (min-width: 768px) and (max-width: 991.98px) {
-    .hero {
-        &__heading {
-            font-size: 6.8rem;
-        }
-    }
 }
 
 /* Mobile */
 @media (max-width: 767.98px) {
     .container {
         --grid-gutter-x: 30px;
+    }
+
+    .hero-col__promote {
+        right: 22px;
     }
 }
 
@@ -170,23 +162,13 @@
     }
 
     .hero {
-        &-col__wrap {
-            height: 250px;
-        }
-    }
-}
-
-@media (max-width: 375.98px) {
-    .hero {
         &__heading {
             font-size: 3.6rem;
 
-            &::before {
-                width: 167px;
-                height: 16px;
-
-                bottom: -4px;
-                left: 16px;
+            &-decor {
+                &::after {
+                    bottom: -8px;
+                }
             }
         }
 
@@ -196,7 +178,7 @@
         }
 
         &-col__wrap {
-            height: 180px;
+            height: 250px;
         }
 
         &-col {
@@ -204,7 +186,7 @@
                 margin-top: 32px;
 
                 &-title {
-                    font-size: 0.8rem;
+                    font-size: 1rem;
                 }
 
                 &-avatar ~ &-avatar {
@@ -222,6 +204,82 @@
                 margin-top: 60px;
 
                 &-icon {
+                    width: 20px;
+                }
+            }
+
+            &__sing {
+                width: 145px;
+                padding: 10px 0;
+                margin: -55px auto 0;
+                border-radius: 5px;
+    
+                &-singer {
+                    font-size: 1.2rem;
+                }
+    
+                &-name {
+                    margin-top: 4px;
+                    font-size: 0.9rem;
+                }
+            }
+
+            &__promote {
+                @include abstracts.flex-center(
+                    $drt: column,
+                    $rg: 2px,
+                    $w: 60px,
+                    $circle: true
+                );
+        
+                &-title {
+                    font-size: 1rem;
+                }
+        
+                &-desc {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+
+    .audio-player {
+        @include abstracts.flex-align($jtf: true);
+
+        width: 130px;
+        height: 36px;
+        padding: 10px 12px;
+
+        border-radius: 9px;
+
+        background: #fff;
+
+        &::after {
+            content: url(../images/wave-small.svg);
+        }
+    }
+
+    .playPauseBtn {
+        @include abstracts.flex-center($w: 16px, $circle: true);
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 375.98px) {
+    .hero {
+        &-col__wrap {
+            height: 180px;
+        }
+
+        &-col {
+            &__listener {
+                &-title {
+                    font-size: 0.8rem;
+                }
+            }
+
+            &__app {
+                &-icon {
                     width: 16px;
                 }
             }
@@ -230,7 +288,6 @@
                 width: 115px;
                 padding: 8px 0;
                 margin: -43px auto 0;
-                border-radius: 5px;
     
                 &-singer {
                     font-size: 0.8rem;
@@ -264,23 +321,6 @@
     }
 
     .audio-player {
-        @include abstracts.flex-align($jtf: true);
-
         width: 116px;
-        height: 36px;
-        padding: 10px 12px;
-
-        border-radius: 9px;
-
-        background: #fff;
-
-        &::after {
-            content: url(../images/wave-small.svg);
-        }
-    }
-
-    .playPauseBtn {
-        @include abstracts.flex-center($w: 16px, $circle: true);
-        font-size: 0.8rem;
     }
 }

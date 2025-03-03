@@ -13,23 +13,32 @@
     }
 
     &__heading {
-        position: relative;
-        z-index: 1;
-
         color: abstracts.$text-color;
 
         @include abstracts.text-styles(7rem, 1.14, 700);
 
-        &::before {
-            content: "";
-            position: absolute;
-            left: 33px;bottom: 72px;
-            z-index: -1;
-            background-image: url("../../assets/images/hero-decor-2.svg");
-            background-size: contain;
-            background-repeat: no-repeat;
-            width: 332px;
-            height: 38px;   
+        &-decor {
+            position: relative;
+            z-index: 1;
+
+            display: inline-block;
+
+            height: 1.14em;
+
+            &::after {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -15px;
+                z-index: -1;
+
+                content: "";
+                background-image: url("../../assets/images/hero-decor-2.svg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                width: 85.4%;
+                height: 48%;
+            }
         }
     }
 
@@ -163,12 +172,13 @@
 
         background-color: #ff9051;
 
-        &::before, &::after {
+        &::before,
+        &::after {
             content: "";
             @include abstracts.position(absolute) {
                 top: 48.8%;
                 right: 117%;
-            };
+            }
 
             background-image: url(../../assets/images/hero-decor-1.svg);
             background-repeat: no-repeat;
