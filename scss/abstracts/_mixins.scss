@@ -5,12 +5,13 @@
     column-gap: $cg;
 }
 
-@mixin flex-center($drt: null, $rg: null, $circle: false, $w: null,  $h: $w) {
+@mixin flex-center($drt: null, $rg: null, $cg: null, $circle: false, $w: null,  $h: $w) {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: $drt;
     row-gap: $rg;
+    column-gap: $cg;
 
     width: $w;
     height: $h;
@@ -27,7 +28,7 @@
     z-index: $z;
 }
 
-@mixin text-styles($fz, $lh, $fw: null){
+@mixin text-styles($fz: null, $lh: null, $fw: null){
     font-size: $fz;
     font-weight: $fw;
     line-height: $lh;

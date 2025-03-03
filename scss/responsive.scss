@@ -118,6 +118,19 @@
             font-size: 6.8rem;
         }
     }
+
+
+    .features {
+        padding: 100px 0 50px;
+
+        &__media {
+            height: 330px;
+        }
+
+        & .cta-play {
+            margin-top: 28px;
+        }
+    }
 }
 /* Tablet */
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -131,6 +144,16 @@
 
     .hero-col__promote {
         right: 22px;
+    }
+
+    .features {
+        & .row {
+            flex-direction: column-reverse;
+        }
+
+        &__content {
+            margin-top: 38px;
+        }
     }
 }
 
@@ -213,11 +236,11 @@
                 padding: 10px 0;
                 margin: -55px auto 0;
                 border-radius: 5px;
-    
+
                 &-singer {
                     font-size: 1.2rem;
                 }
-    
+
                 &-name {
                     margin-top: 4px;
                     font-size: 0.9rem;
@@ -231,11 +254,11 @@
                     $w: 60px,
                     $circle: true
                 );
-        
+
                 &-title {
                     font-size: 1rem;
                 }
-        
+
                 &-desc {
                     font-size: 0.8rem;
                 }
@@ -288,11 +311,11 @@
                 width: 115px;
                 padding: 8px 0;
                 margin: -43px auto 0;
-    
+
                 &-singer {
                     font-size: 0.8rem;
                 }
-    
+
                 &-name {
                     margin-top: 2px;
                     font-size: 0.7rem;
@@ -301,18 +324,18 @@
 
             &__promote {
                 @include abstracts.position(absolute, 5px, 42px);
-        
+
                 @include abstracts.flex-center(
                     $drt: column,
                     $rg: 2px,
                     $w: 48px,
                     $circle: true
                 );
-        
+
                 &-title {
                     font-size: 0.8rem;
                 }
-        
+
                 &-desc {
                     font-size: 0.6rem;
                 }
@@ -322,5 +345,11 @@
 
     .audio-player {
         width: 116px;
+    }
+
+    .features {
+        &__media {
+            height: 238px;
+        }
     }
 }

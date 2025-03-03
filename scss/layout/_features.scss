@@ -1,0 +1,80 @@
+@use "../abstracts";
+@use "../base";
+
+.features {
+    & .row {
+        align-items: center;
+    }
+
+    padding: 160px 0 80px;
+
+    &__heading {
+        @extend .section-heading;
+    }
+
+    &__desc {
+        @extend .section-desc;
+    }
+
+    & .cta-play {
+        margin-top: 38px;
+        background-color: #936cdd;
+
+        &__title {
+            color: #fff;
+        }
+
+        &__icon {
+            color: #936cdd;
+            background-color: #fff;
+        }
+    }
+
+    &__media {
+        position: relative;
+        @include abstracts.flex-center($w: 100%, $h: 399px);
+        &::before {
+            content: "";
+            width: 50.4%;
+            height: 72%;
+            border-radius: 50%;
+            opacity: 0.4;
+            background: #ff9051;
+            filter: blur(129px);
+        }
+
+        &-img {
+            position: absolute;
+
+            &:first-child {
+                left: 32.5%;
+                top: 0;
+                width: 25.965%;
+            }
+
+            &:nth-child(2) {
+                left: 0;
+                bottom: 39%;
+                width: 14.036%;
+            }
+
+            &:nth-child(3) {
+                left: 29.65%;
+                bottom: 0;
+                width: 22.11%;
+            }
+
+            &:nth-child(4) {
+                right: 0;
+                top: 14.8%;
+                width: 17.544%;
+            }
+
+            &:nth-child(5) {
+                width: 24.211%;
+                bottom: 10%;
+                right: 8.42%;
+            }
+        }
+    }
+}

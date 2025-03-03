@@ -4,7 +4,8 @@ a {
     display: inline-block;
 }
 
-input, button {
+input,
+button {
     font-family: inherit;
     font-size: inherit;
 }
@@ -74,7 +75,7 @@ body {
     transform: translateY(-50%);
 
     @include abstracts.flex-align($jtf: true);
-    
+
     width: 194px;
     height: 60px;
     padding: 17px 21px;
@@ -89,14 +90,79 @@ body {
     }
 }
 
-
 .playPauseBtn {
     @include abstracts.flex-center($w: 26px, $circle: true);
     flex-shrink: 0;
 
     background: #fff;
     border: 1px solid #936cdd;
-    color: #936CDD;
+    color: #936cdd;
     cursor: pointer;
     font-size: 1rem;
+}
+
+.cta-play {
+    @include abstracts.flex-center($w: 157px, $h: 64px, $cg: 8px);
+    background-color: transparent;
+
+    border-radius: 8px;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &__title {
+        @include abstracts.text-styles(1.8rem, 1.67, 600);
+        color: abstracts.$text-color;
+    }
+
+    &__icon {
+        @include abstracts.flex-center($circle: true, $w: 18px);
+        flex-shrink: 0;
+        background-color: abstracts.$text-color;
+        color: #fff;
+
+    }
+}
+
+.section {
+    &-heading {
+        @include abstracts.text-styles(4.2rem, 1.24, 700);
+        @media (max-width: 768px) {
+            @include abstracts.text-styles(2.6rem, 1.38);
+        }
+
+        color: abstracts.$text-color;
+
+        &__decor {
+            display: inline-block;
+            height: 1.24em;
+            position: relative;
+
+            &::after {
+                content: "";
+                @include abstracts.position(absolute, $b: -34px, $l: 0, $z: -1);
+                @media (max-width: 768px) {
+                    bottom: -23px;
+                }
+                background-image: url(../../assets/images/hero-decor-2.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    &-desc {
+        margin-top: 18px;
+
+        @include abstracts.text-styles($lh: 1.75);
+        @media (max-width: 768px) {
+            @include abstracts.text-styles(1.4rem, 1.71);
+            margin-top: 12px;
+        }
+
+        color: abstracts.$text-second-color;
+    }
 }

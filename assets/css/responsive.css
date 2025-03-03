@@ -87,6 +87,15 @@
     margin-top: 40px;
     font-size: 6.8rem;
   }
+  .features {
+    padding: 100px 0 50px;
+  }
+  .features__media {
+    height: 330px;
+  }
+  .features .cta-play {
+    margin-top: 28px;
+  }
 }
 /* Tablet */
 /* Mobile */
@@ -96,6 +105,12 @@
   }
   .hero-col__promote {
     right: 22px;
+  }
+  .features .row {
+    flex-direction: column-reverse;
+  }
+  .features__content {
+    margin-top: 38px;
   }
 }
 @media (max-width: 576px) {
@@ -247,6 +262,9 @@
   }
   .audio-player {
     width: 116px;
+  }
+  .features__media {
+    height: 238px;
   }
 }
 

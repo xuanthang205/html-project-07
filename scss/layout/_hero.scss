@@ -26,11 +26,8 @@
             height: 1.14em;
 
             &::after {
-                position: absolute;
-                left: 50%;
+                @include abstracts.position(absolute, $l: 50%, $b: -15px, $z: -1);
                 transform: translateX(-50%);
-                bottom: -15px;
-                z-index: -1;
 
                 content: "";
                 background-image: url("../../assets/images/hero-decor-2.svg");
@@ -56,22 +53,11 @@
 
         &-btn {
             background-color: #936cdd;
-        }
-
-        &-link {
-            @include abstracts.flex-align($cg: 8px);
-
-            margin-left: 28px;
-
-            cursor: pointer;
-        }
-
-        &-title {
-            color: #201830;
-            @include abstracts.text-styles(1.8rem, 1.67, 600);
+            margin-right: 8px;
         }
     }
 }
+
 .hero-col {
     &:nth-child(2) {
         position: relative;
