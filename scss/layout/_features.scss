@@ -78,3 +78,102 @@
         }
     }
 }
+
+.features-2 {
+    padding: 80px 0 160px;
+
+    &__heading {
+        text-align: center;
+    }
+
+    &__desc {
+        @extend .features-2__heading;
+        width: 42%;
+        margin: 18px auto 0;
+    }
+
+    &__body {
+        --fea-height: 285px;
+        --fea-gap: 30px;
+        margin-top: 70px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: var(--fea-gap);
+    }
+
+    &-item {
+        display: flex;
+        align-items: flex-end;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 8px;
+        height: var(--fea-height);
+        background-position: center;
+
+        &:first-child {
+            grid-column: 1 / span 4;
+            grid-row: 1 / span 2;
+
+            background-image: url(../../assets/images/education.png);
+
+            background-position: 24% 0;
+            height: calc(var(--fea-height) * 2 + var(--fea-gap));
+        }
+
+        &:nth-child(2) {
+            grid-column: 5 / span 5;
+
+            background-image: url(../../assets/images/healthcare.png);
+
+        }
+
+        &:nth-child(3) {
+            grid-column: 10 / span 3;
+
+            background-image: url(../../assets/images/music.png);
+        }
+
+        &:nth-child(4) {
+            grid-column: 5 / span 3;
+
+            background-image: url(../../assets/images/fashion.png);
+        }
+
+        &:nth-child(5) {
+            grid-column: 8 / span 5;
+
+            background-image: url(../../assets/images/comedy.png);
+        }
+
+        &__body {
+            flex: 1;
+
+            padding: 16px 24px;
+
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 0 0 8px 8px;
+
+            color: #fff;
+
+            &-heading {
+                @include abstracts.flex-align($cg: 8px);
+
+                @include abstracts.text-styles(1.8rem, 1.67, 600);
+
+                &::after {
+                    content: url(../../assets/icons/fea-Icon.svg);
+                }
+            }
+
+            &-desc {
+                @include abstracts.text-styles(1.4rem, 1.71, 400);
+            }
+        }
+    }
+
+    &__cta {
+        margin: 55px 0 0 50%;
+        transform: translateX(-50%);
+    }
+}
