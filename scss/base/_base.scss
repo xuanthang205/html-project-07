@@ -161,19 +161,12 @@ body {
             margin-top: 12px;
         }
 
-        @media (max-width: 576px) {
-            @include abstracts.text-styles(1rem, 1.8);
-        }
-
         color: abstracts.$text-second-color;
     }
 }
 
-.pagination {
-    bottom: 0;
-}
-
 .swiper-pagination {
+    --swiper-pagination-bottom: 0;
     z-index: 1;
     &-bullet {
         width: 8px;

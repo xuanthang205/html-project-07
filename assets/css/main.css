@@ -1269,18 +1269,9 @@ body {
     margin-top: 12px;
   }
 }
-@media (max-width: 576px) {
-  .section-desc, .features__desc {
-    font-size: 1rem;
-    line-height: 1.8;
-  }
-}
-
-.pagination {
-  bottom: 0;
-}
 
 .swiper-pagination {
+  --swiper-pagination-bottom: 0;
   z-index: 1;
 }
 .swiper-pagination-bullet {
@@ -1785,6 +1776,56 @@ li:not(:first-child) .sub-nav__item {
   flex-shrink: 0;
   color: inherit;
   background-color: currentColor;
+}
+
+.testimonial {
+  padding: 160px 0;
+}
+.testimonial__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.testimonial-media {
+  width: 48.72%;
+}
+.testimonial-media__wrap {
+  height: 444px;
+  position: relative;
+}
+.testimonial-media__wrap-img {
+  object-fit: cover;
+  border-radius: 8px;
+}
+.testimonial-media__wrap-img:first-child {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 47.37%;
+  height: 63.96%;
+}
+.testimonial-media__wrap-img:nth-child(2) {
+  display: block;
+  width: 64.91%;
+  height: 100%;
+  margin-left: auto;
+}
+.testimonial-content {
+  width: 40.2%;
+  padding-bottom: 47px;
+  position: relative;
+}
+.testimonial-content__heading::before {
+  content: url(../../assets/icons/testi-decor.svg);
+  display: block;
+  margin-bottom: 18px;
+}
+.testimonial-quote__desc {
+  margin-top: 38px;
+}
+.testimonial-quote__cite {
+  display: block;
+  margin-top: 18px;
 }
 
 /*# sourceMappingURL=main.css.map */

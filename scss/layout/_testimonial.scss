@@ -1,0 +1,60 @@
+@use "../abstracts";
+
+.testimonial {
+    padding: 160px 0;
+    &__body {
+        @include abstracts.flex-align($jtf: true);
+    }
+
+    &-media {
+        width: 48.72%;
+
+        &__wrap {
+            height: 444px;
+            position: relative;
+            &-img {
+                object-fit: cover;
+                border-radius: 8px;
+                
+                &:first-child {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 47.37%;
+                    height: 63.96%;
+                }
+                
+                &:nth-child(2) {
+                    display: block;
+                    width: 64.91%;
+                    height: 100%;
+                    margin-left: auto;
+                }
+            }
+        }
+
+    }
+
+    &-content {
+        width: 40.2%;
+        padding-bottom: 47px;
+        position: relative;
+
+        &__heading::before {
+            content: url(../../assets/icons/testi-decor.svg);
+            display: block;
+            margin-bottom: 18px;
+        }
+    }
+
+    &-quote {
+        &__desc {
+            margin-top: 38px;
+        }
+
+        &__cite {
+            display: block;
+            margin-top: 18px;
+        }
+    }
+}
