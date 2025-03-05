@@ -1,0 +1,39 @@
+@use "../abstracts";
+.letter {
+    &__inner{
+        position: relative;
+        padding: 100px 0;
+        background-color: abstracts.$text-color;
+        border-radius: 12px;
+
+        & .row {
+            align-items: center;
+            column-gap: 30px;
+        }
+    }
+
+    &__heading{
+        color: #fff;
+    }
+
+    &__desc{
+        color: #ABA6B5;
+        margin-top: 0;
+    }
+
+    &__decor {
+        position: absolute;
+        &:nth-child(3) {
+            left: 2.99%;
+            bottom: 10.274%;
+        }
+        &:nth-child(4) {
+            left: 45.13%;
+            top: 5.936%;
+        }
+        &:nth-child(5) {
+            right: 2.308%;
+            top: 41.096%;
+        }
+    }
+}

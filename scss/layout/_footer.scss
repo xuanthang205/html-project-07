@@ -1,0 +1,82 @@
+@use "../abstracts";
+@use "../base";
+
+.footer {
+    padding: 100px 0 38px;
+    background-color: abstracts.$bg-color;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__left {
+        width: 23.684%;
+    }
+
+    & .copyright {
+        margin-top: 14px;
+        color: abstracts.$text-second-color;
+        line-height: 1.75;
+    }
+
+    &__social {
+        margin-top: 18px;
+        display: flex;
+        column-gap: 14px;
+
+        &-link {
+            flex-shrink: 0;
+            @include abstracts.flex-center($w: 35px, $circle: true);
+            background-color: abstracts.$text-color;
+            transition: background-color 0.3s ease-in-out;
+
+            &:hover {
+                background-color: #936cdd;
+            }
+        }
+    }
+
+    &__body {
+        @extend .footer__inner;
+        width: 38.462%;
+    }
+
+    &__heading {
+        color: abstracts.$text-color;
+        @include abstracts.text-styles(2rem, 1.5, 700);
+    }
+
+    &-col {
+        &__list {
+            margin-top: 24px;
+        }
+
+        &__link {
+            @extend .section-desc;
+            margin-top: 16px;
+            display: block;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__right {
+        &-wrap {
+            display: flex;
+            column-gap: 16px;
+            margin-top: 24px;
+        }
+
+        &-icon {
+            width: 36px;
+            transition: scale 0.3s ease-in-out;
+
+            &:hover {
+                scale: 1.1;
+            }
+        }
+    }
+}
