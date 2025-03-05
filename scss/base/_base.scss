@@ -138,13 +138,11 @@ body {
             display: inline-block;
             height: 1.24em;
             position: relative;
+            z-index: 1;
 
             &::after {
                 content: "";
-                @include abstracts.position(absolute, $b: -34px, $l: 0, $z: -1);
-                @media (max-width: 768px) {
-                    bottom: -23px;
-                }
+                @include abstracts.position(absolute, $b: -65.4%, $l: 0, $z: -1);
                 background-image: url(../../assets/images/hero-decor-2.svg);
                 background-repeat: no-repeat;
                 background-size: contain;
@@ -163,6 +161,33 @@ body {
             margin-top: 12px;
         }
 
+        @media (max-width: 576px) {
+            @include abstracts.text-styles(1rem, 1.8);
+        }
+
         color: abstracts.$text-second-color;
+    }
+}
+
+.pagination {
+    bottom: 0;
+}
+
+.swiper-pagination {
+    z-index: 1;
+    &-bullet {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #D8D5DE;
+        @media (max-width: 575.98px) {
+            width: 5px;
+            height: 5px;
+        }
+
+        &-active {
+            background-color: #936cdd;
+            scale: 1.4;
+        }
     }
 }

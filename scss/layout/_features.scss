@@ -124,7 +124,6 @@
             grid-column: 5 / span 5;
 
             background-image: url(../../assets/images/healthcare.png);
-
         }
 
         &:nth-child(3) {
@@ -175,5 +174,102 @@
     &__cta {
         margin: 55px 0 0 50%;
         transform: translateX(-50%);
+    }
+}
+
+.features-3 {
+    padding: 100px 0;
+    background-color: abstracts.$bg-color;
+
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    &__heading {
+        grid-column: 1 / span 5;
+        @media (max-width: 991.98px) {
+            grid-column: 1 / 12;
+        }
+    }
+
+    &-wrap {
+        &:nth-child(2) {
+            grid-column: -1 / -3;
+            place-self: center end;
+            @media (max-width: 991.98px) {
+                grid-column: 1 / -1;
+                grid-row: 3;
+                justify-self: start;
+            }
+        }
+
+        &:nth-child(3) {
+            grid-column: 1 / 13;
+        }
+    }
+
+    &__body {
+        position: relative;
+
+        padding-bottom: 62px;
+        margin-top: 84px;
+    }
+
+    &-item {
+        display: flex;
+        justify-content: space-between;
+
+        &__media {
+            width: 47.37%;
+        }
+
+        &__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        &__content {
+            width: 47.37%;
+            padding: 30px 0;
+        }
+
+        &__title {
+            color: #fd6f1f;
+            @include abstracts.text-styles(1.4rem, 1.71);
+        }
+
+        &__heading {
+            margin-top: 6px;
+
+            @include abstracts.text-styles(2rem, 1.5, 700);
+            color: abstracts.$text-color;
+        }
+
+        &__cta {
+            @include abstracts.flex-align($cg: 6px);
+
+            margin-top: 11px;
+
+            color: abstracts.$text-color;
+            @include abstracts.text-styles(1.4rem, 1.71, 600);
+
+            transition: color 0.2s ease;
+
+            &:hover {
+                color: #936cdd;
+            }
+
+            &-icon {
+                @include abstracts.flex-center($circle: true, $w: 14px);
+                flex-shrink: 0;
+
+                color: inherit;
+
+                background-color: currentColor;
+            }
+        }
     }
 }

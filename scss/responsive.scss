@@ -115,7 +115,7 @@
 
         &__heading {
             margin-top: 40px;
-            font-size: 6.8rem;
+            font-size: 6rem;
         }
     }
 
@@ -129,6 +129,18 @@
 
         & .cta-play {
             margin-top: 28px;
+        }
+    }
+
+    .features-3 {
+        padding: 70px 0;
+        &__body {
+            margin-top: 38px;
+            padding-bottom: 30px;
+        }
+
+        &-wrap:nth-child(2) {
+            margin-top: 38px;
         }
     }
 }
@@ -148,10 +160,6 @@
 
 /* Mobile */
 @media (max-width: 767.98px) {
-    .container {
-        --grid-gutter-x: 30px;
-    }
-
     .hero-col__promote {
         right: 22px;
     }
@@ -206,7 +214,10 @@
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575.98px) {
+    .container {
+        --grid-gutter-x: 30px
+    }
     .mobile {
         &__cta-link.btn {
             margin-bottom: 12px;
@@ -236,12 +247,6 @@
     .hero {
         &__heading {
             font-size: 3.6rem;
-
-            &-decor {
-                &::after {
-                    bottom: -8px;
-                }
-            }
         }
 
         &__desc {
@@ -334,6 +339,46 @@
     .playPauseBtn {
         @include abstracts.flex-center($w: 16px, $circle: true);
         font-size: 0.8rem;
+    }
+
+    .features-3 {
+    
+        &-item {
+            align-items: center;
+    
+            &__img {
+                border-radius: 4px;
+                height: 170px;
+            }
+    
+            &__content {
+                padding: 17px 0;
+            }
+    
+            &__title {
+                @include abstracts.text-styles(1rem, 1);
+            }
+    
+            &__heading {
+                margin-top: 7px;
+    
+                font-size: 1.2rem;
+            }
+    
+            &__cta {
+                @include abstracts.flex-align($cg: 4px);
+
+                color: #936cdd;
+    
+                margin-top: 7px;
+
+                @include abstracts.text-styles(1rem, 1, 600);
+    
+                &-icon {
+                    @include abstracts.flex-center($circle: true, $w: 10px);
+                }
+            }
+        }
     }
 }
 
