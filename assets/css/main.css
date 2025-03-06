@@ -1361,7 +1361,7 @@ body {
   font-weight: 600;
 }
 
-.nav {
+.nav__list {
   display: flex;
   align-items: center;
 }
@@ -1384,15 +1384,18 @@ body {
   color: #665F73;
   transition: all 0.2s linear;
 }
+.sub-nav__title:hover {
+  cursor: pointer;
+}
 .sub-nav__title svg {
   margin-top: 4px;
 }
 .sub-nav__list {
   position: absolute;
   left: 24px;
-  bottom: -118px;
+  bottom: -117px;
   display: none;
-  border: 1px solid #665F73;
+  border: 1px solid #e9e3e3;
   border-radius: 4px;
   background-color: #FFF8F3;
   animation: fade 0.2s linear;
@@ -1405,8 +1408,8 @@ body {
   font-size: 1.4rem;
   transition: all 0.2s linear;
 }
-li:not(:first-child) .sub-nav__item {
-  border-top: 1px solid #665F73;
+.sub-nav li:not(:first-child) .sub-nav__item {
+  border-top: 1px solid #e9e3e3;
 }
 
 .hero {

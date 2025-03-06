@@ -117,45 +117,65 @@
                         />
                     </a>
                     <nav class="nav only-pc">
-                        <a href="#episodes" class="nav__item">Episodes</a>
-                        <a href="#trending" class="nav__item">Trending</a>
-                        <div class="sub-nav">
-                            <div class="sub-nav__title">
-                                <span>Category</span>
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="10"
-                                    height="6"
-                                    viewBox="0 0 10 6"
-                                    fill="none"
-                                >
-                                    <path
-                                        d="M1 1L5 5L9 1"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    />
-                                </svg>
-                            </div>
-                            <ul class="sub-nav__list">
-                                <li>
-                                    <a href="#category" class="sub-nav__item"
-                                        >Category 1</a
+                        <ul class="nav__list">
+                            <li>
+                                <a href="#episodes" class="nav__item">
+                                    Episodes
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#trending" class="nav__item">
+                                    Trending
+                                </a>
+                            </li>
+                            <li class="sub-nav">
+                                <div class="sub-nav__title">
+                                    <span>Category</span>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="10"
+                                        height="6"
+                                        viewBox="0 0 10 6"
+                                        fill="none"
                                     >
-                                </li>
-                                <li>
-                                    <a href="#category" class="sub-nav__item"
-                                        >Category 2</a
-                                    >
-                                </li>
-                                <li>
-                                    <a href="#category" class="sub-nav__item"
-                                        >Category 3</a
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                        <a href="#blog" class="nav__item">Blog</a>
+                                        <path
+                                            d="M1 1L5 5L9 1"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                </div>
+                                <ul class="sub-nav__list">
+                                    <li>
+                                        <a
+                                            href="#category"
+                                            class="sub-nav__item"
+                                            >Category 1</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#category"
+                                            class="sub-nav__item"
+                                            >Category 2</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="#category"
+                                            class="sub-nav__item"
+                                            >Category 3</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#blog" class="nav__item">
+                                    Blog
+                                </a>
+                            </li>
+                        </ul>
                     </nav>
                     <div class="header__actions only-pc">
                         <a href="#!" class="header__link">Log in</a>
@@ -1364,6 +1384,7 @@
                                         required
                                         placeholder="Your name"
                                         class="form-letter__input"
+                                        autocomplete="off"
                                     />
                                 </div>
                                 <div class="col-lg-4 col-12 col-md-8">
@@ -1375,6 +1396,7 @@
                                         placeholder="Your email address"
                                         pattern="/[a-z0-9\._%+!$&*=^|~#%'`?{}/\-]+@([a-z0-9\-]+\.){1,}([a-z]{2,16})/"
                                         class="form-letter__input"
+                                        autocomplete="off"
                                     />
                                 </div>
                                 <div class="col-lg-2">
@@ -1440,7 +1462,7 @@
             <div class="container">
                 <div class="footer__inner">
                     <div class="footer__left">
-                        <img src="./assets/icons/babble-logo.svg" alt="" />
+                        <a href="#"><img src="./assets/icons/babble-logo.svg" alt="" /></a>
                         <p class="copyright">
                             Copyright © 2022 UIHUT all rights reserved.
                         </p>
@@ -1495,19 +1517,29 @@
                             <h3 class="footer__heading">Linkes</h3>
                             <ul class="footer-col__list">
                                 <li>
-                                    <a href="#!" class="footer-col__link">Home</a>
+                                    <a href="#!" class="footer-col__link"
+                                        >Home</a
+                                    >
                                 </li>
                                 <li>
-                                    <a href="#!" class="footer-col__link">Epidodes</a>
+                                    <a href="#!" class="footer-col__link"
+                                        >Epidodes</a
+                                    >
                                 </li>
                                 <li>
-                                    <a href="#!" class="footer-col__link">Trending</a>
+                                    <a href="#!" class="footer-col__link"
+                                        >Trending</a
+                                    >
                                 </li>
                                 <li>
-                                    <a href="#!" class="footer-col__link">Category</a>
+                                    <a href="#!" class="footer-col__link"
+                                        >Category</a
+                                    >
                                 </li>
                                 <li>
-                                    <a href="#!" class="footer-col__link">Blog</a>
+                                    <a href="#!" class="footer-col__link"
+                                        >Blog</a
+                                    >
                                 </li>
                             </ul>
                         </div>
@@ -1515,16 +1547,24 @@
                             <h3 class="footer__heading">Features</h3>
                             <ul class="footer-col__list">
                                 <li>
-                                    <a href="#!" class="footer-col__link">Style guide</a>
+                                    <a href="#!" class="footer-col__link"
+                                        >Style guide</a
+                                    >
                                 </li>
                                 <li>
-                                    <a href="#!" class="footer-col__link">Instructions</a>
+                                    <a href="#!" class="footer-col__link"
+                                        >Instructions</a
+                                    >
                                 </li>
                                 <li>
-                                    <a href="#!" class="footer-col__link">Catelog</a>
+                                    <a href="#!" class="footer-col__link"
+                                        >Catelog</a
+                                    >
                                 </li>
                                 <li>
-                                    <a href="#!" class="footer-col__link">Your podcast</a>
+                                    <a href="#!" class="footer-col__link"
+                                        >Your podcast</a
+                                    >
                                 </li>
                             </ul>
                         </div>
@@ -1532,16 +1572,24 @@
                             <h3 class="footer__heading">Company</h3>
                             <ul class="footer-col__list">
                                 <li>
-                                    <a href="#!" class="footer-col__link">Privacy</a>
+                                    <a href="#!" class="footer-col__link"
+                                        >Privacy</a
+                                    >
                                 </li>
                                 <li>
-                                    <a href="#!" class="footer-col__link">Teams</a>
+                                    <a href="#!" class="footer-col__link"
+                                        >Teams</a
+                                    >
                                 </li>
                                 <li>
-                                    <a href="#!" class="footer-col__link">Security</a>
+                                    <a href="#!" class="footer-col__link"
+                                        >Security</a
+                                    >
                                 </li>
                                 <li>
-                                    <a href="#!" class="footer-col__link">Cookies</a>
+                                    <a href="#!" class="footer-col__link"
+                                        >Cookies</a
+                                    >
                                 </li>
                             </ul>
                         </div>
@@ -1551,19 +1599,39 @@
                         <h3 class="footer__heading">Listen on</h3>
                         <div class="footer__right-wrap">
                             <a href="#!">
-                                <img src="./assets/icons/image-21.svg" alt="" class="footer__right-icon">
+                                <img
+                                    src="./assets/icons/image-21.svg"
+                                    alt=""
+                                    class="footer__right-icon"
+                                />
                             </a>
                             <a href="#!">
-                                <img src="./assets/icons/image-22.svg" alt="" class="footer__right-icon">
+                                <img
+                                    src="./assets/icons/image-22.svg"
+                                    alt=""
+                                    class="footer__right-icon"
+                                />
                             </a>
                             <a href="#!">
-                                <img src="./assets/icons/image-23.svg" alt="" class="footer__right-icon">
+                                <img
+                                    src="./assets/icons/image-23.svg"
+                                    alt=""
+                                    class="footer__right-icon"
+                                />
                             </a>
                             <a href="#!">
-                                <img src="./assets/icons/image-24.svg" alt="" class="footer__right-icon">
+                                <img
+                                    src="./assets/icons/image-24.svg"
+                                    alt=""
+                                    class="footer__right-icon"
+                                />
                             </a>
                             <a href="#!">
-                                <img src="./assets/icons/image-25.svg" alt="" class="footer__right-icon">
+                                <img
+                                    src="./assets/icons/image-25.svg"
+                                    alt=""
+                                    class="footer__right-icon"
+                                />
                             </a>
                         </div>
                     </div>

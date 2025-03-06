@@ -36,7 +36,9 @@
 }
 
 .nav {
-    @include abstracts.flex-align;
+    &__list {
+        @include abstracts.flex-align;
+    }
 
     &__item {
         padding: 10px 24px;
@@ -69,6 +71,7 @@
 
         &:hover {
             @extend .header__link;
+            cursor: pointer;
         }
 
         svg {
@@ -77,11 +80,11 @@
     }
 
     &__list {
-        @include abstracts.position(absolute, $l:24px, $b: -118px);
+        @include abstracts.position(absolute, $l:24px, $b: -117px);
 
         display: none;
 
-        border: 1px solid abstracts.$text-second-color;
+        border: 1px solid #e9e3e3;
         border-radius: 4px;
 
         background-color: abstracts.$bg-color;
@@ -105,8 +108,8 @@
         } 
     }
     
-    li:not(:first-child) &__item{
-        border-top: 1px solid abstracts.$text-second-color;
+    & li:not(:first-child) &__item{
+        border-top: 1px solid #e9e3e3;
     }
 }
 

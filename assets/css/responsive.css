@@ -236,6 +236,9 @@
   .mobile__cta-link.btn {
     margin-bottom: 12px;
   }
+  .mobile__drawer {
+    padding-left: 30px;
+  }
   .mobile__drawer-top img {
     width: 100px;
   }
